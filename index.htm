@@ -4031,7 +4031,7 @@ class="framer-5sp023" aria-hidden="true"></div>
                             <input
                                     type="text"
                                     id="user-input"
-                                    placeholder="Enter your message"
+                                    placeholder="Hello, Bitch!"
                             />
                             <button id="send-btn" onclick="sendMessage()">
                                 Send
@@ -4053,7 +4053,7 @@ class="framer-5sp023" aria-hidden="true"></div>
                             <input
                                     type="text"
                                     id="user-input"
-                                    placeholder="Enter your message"
+                                    placeholder="Hello, Bitch!"
                             />
                             <button id="send-btn" onclick="sendMessage()">
                                 Send
@@ -4075,7 +4075,7 @@ class="framer-5sp023" aria-hidden="true"></div>
                             <input
                                     type="text"
                                     id="user-input"
-                                    placeholder="Enter your message"
+                                    placeholder="Hello, Bitch!"
                             />
                             <button id="send-btn" onclick="sendMessage()">
                                 Send
@@ -10445,10 +10445,11 @@ var animator = (() => {
 
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
      .marquee {
         display: flex;
         gap: 10px;
-        animation: scroll-left 30s linear infinite;
+        animation: scroll-left 50s linear infinite;
     }
 
     /* Анімація для плавного руху */
@@ -10494,6 +10495,8 @@ var animator = (() => {
     }
 
     #chat-container {
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
         width: 800px;
         height: 450px;
         border: 2px #43e1c1 solid;
@@ -10507,9 +10510,12 @@ var animator = (() => {
     }
 
     #messages {
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
         flex-grow: 1;
         padding: 10px;
         overflow-y: auto;
+        color:#43e1c1;
     }
 
     #messages::-webkit-scrollbar {
@@ -10517,12 +10523,12 @@ var animator = (() => {
     }
 
     #messages::-webkit-scrollbar-track {
-        background: #57b7ff;
+        background: #43e1c1;
         border-radius: 10px;
     }
 
     #messages::-webkit-scrollbar-thumb {
-        background: #2369aa; /* Цвет ползунка */
+        background: #43e1c1; /* Цвет ползунка */
         border-radius: 10px;
 
         border: 2px #43e1c1 solid;
@@ -10533,9 +10539,12 @@ var animator = (() => {
     }
 
     .message {
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        color:#43e1c1;
     }
 
     .user {
@@ -10578,15 +10587,20 @@ var animator = (() => {
         padding: 8px;
         border-radius: 10px;
         border: 1px #43e1c1 solid;
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
+        color:#43e1c1;
     }
 
     .bot-text {
         background-color: rgba(255, 255, 255, 0.3);
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
     }
 
     .user-text {
         background-color: rgba(0, 0, 0, 0.3);
-        color: white;
+        color:#43e1c1;
         border-color: rgba(0, 0, 0, 0.6);
     }
 
@@ -10599,12 +10613,15 @@ var animator = (() => {
 
     #user-input {
         flex-grow: 1;
+        color:#43e1c1;
         padding: 10px;
         border: none;
         border-radius: 5px;
         background-color: #162a2d;
         color: #43e1c1;
         outline: none;
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
     }
 
     #send-btn {
@@ -10615,10 +10632,13 @@ var animator = (() => {
         border-radius: 5px;
         cursor: pointer;
         box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-family: "Orbitron", serif;
+        font-optical-sizing: auto;
     }
 
     #send-btn:hover {
         opacity: 0.8;
+
     }
 
     @media (max-width: 1400px) {
@@ -10626,6 +10646,10 @@ var animator = (() => {
             width: 600px;
             height: 350px;
         }
+    }
+
+    input::placeholder {
+        color: #43e1c1;
     }
 
     @media (max-width: 1100px) {
@@ -10738,7 +10762,7 @@ var animator = (() => {
         const botTypingMessage = document.createElement('div');
         botTypingMessage.className = 'message bot';
         botTypingMessage.innerHTML =
-            '<div class="text bot-text">Liqui is typing...</div>';
+            '<div class="text bot-text">Lanai is typing...</div>';
         messagesDiv.appendChild(botTypingMessage);
 
         scrollToBottom();
